@@ -4,15 +4,7 @@ function App() {
 
      return (
           <div
-               style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    height: '100vh',
-                    width: '100vw',
-                    backgroundImage: 'url(back.svg)',
-                    backgroundSize: "cover",
-               }}
+               className="box"
           >
                <img src="logo.svg" alt="logo"
                     style={{

@@ -29,6 +29,18 @@
                     "panel": "shared",
                     "focus": true
                }
+          },
+          {
+               "label": "npm: deploy",
+               "type": "npm",
+               "script": "deploy",
+               "problemMatcher": [],
+               "detail": "Deploy to GitHub Pages",
+               "presentation": {
+                    "reveal": "always",
+                    "panel": "shared",
+                    "focus": true
+               }
           }
      ]
 }
