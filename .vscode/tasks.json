@@ -1,0 +1,22 @@
+{
+     "version": "2.0.0",
+     "tasks": [
+          {
+               "label": "Git Add, Commit & Push with Files",
+               "type": "shell",
+               "command": "if ((git status --porcelain).Length -gt 0) { git add .; $msg = 'Modified: ' + ((git diff --cached --name-only) -join ', '); git commit -m $msg; git push } else { Write-Host 'No changes to commit' }",
+               "problemMatcher": [],
+               "detail": "Automatically commits changed files with their names, then pushes to remote",
+               "presentation": {
+                    "reveal": "always",
+                    "panel": "shared",
+                    "close": true
+               },
+               "options": {
+                    "shell": {
+                         "executable": "powershell.exe"
+                    }
+               }
+          }
+     ]
+}
