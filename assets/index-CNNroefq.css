@@ -1,0 +1,1 @@
+:root{--bg-color: #14234c;--text-color: #f5ffc9}*{padding:0;margin:0;background-color:var(--bg-color);color:var(--text-color)}.box{display:flex;justify-content:center;align-items:center;height:100vh;width:100vw;background-image:url(back.svg);background-size:cover}
