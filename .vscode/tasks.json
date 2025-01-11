@@ -17,6 +17,18 @@
                          "executable": "powershell.exe"
                     }
                }
+          },
+          {
+               "label": "npm: dev",
+               "type": "npm",
+               "script": "dev",
+               "problemMatcher": [],
+               "detail": "Start development server",
+               "presentation": {
+                    "reveal": "always",
+                    "panel": "shared",
+                    "focus": true
+               }
           }
      ]
 }
