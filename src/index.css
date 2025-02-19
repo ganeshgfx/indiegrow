@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
-     --bg-color: #14234c;
-     --text-color: #f5ffc9;
+     --brand-color: #14234c;
+     --brand-color-secondary: #f5ffc9;
+     --brand-color-tertiary: #8e1618;
+     --scroll-bar-color: #3e5879;
 }
 
 * {
@@ -8,14 +11,43 @@
      margin: 0px;
      background-color: var(--bg-color);
      color: var(--text-color);
+     font-family: "Montserrat" !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+     color: var(--brand-color) !important;
+}
+.navTextBox {
+     margin: 0px !important;
+     transition: all 0.6s ease;
+}
+.navTextBox > a {
+     color: var(--brand-color) !important;
+     background-color: transparent !important;
+     padding: 12px;
+     transition: all 0.6s ease;
+}
+.navTextBox:hover > a {
+     color: var(--brand-color-secondary) !important;
+     background-color: var(--brand-color) !important;
 }
 
-.box {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     height: 100vh;
-     width: 100vw;
-     background-image: url(back.svg);
-     background-size: cover;
+/* Scrollbar styling */
+::-webkit-scrollbar {
+     width: 12px;
+     background: white;
+}
+
+::-webkit-scrollbar-thumb {
+     background: var(--brand-color);
+     border-radius: 0px;
+     opacity: 0.5;
+}
+
+::-webkit-scrollbar-track {
+     background: white;
 }
