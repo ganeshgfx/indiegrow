@@ -1,11 +1,12 @@
-import { Container, Stack, Box, Card, Typography, AspectRatio, CardContent, Button } from "@mui/joy";
+import { Container, Stack, Box, Card, Typography, AspectRatio, CardContent, Button, Table, Divider } from "@mui/joy";
 import Reveal from "./Reveal";
 import RevealMoveUp from "./RevealMoveUp";
 import Logos from "./Logos";
-import { randomFloat } from "./Utils";
+import { chunked, randomFloat } from "./Utils";
 import Space from "./Space";
 import { FaArrowRight } from "react-icons/fa";
 import Hover from "./Hover";
+import { img } from "motion/react-client";
 const Home = () => {
      const heaingStyle = {
           fontSize: "3rem",
@@ -16,7 +17,6 @@ const Home = () => {
           <Space />
           <Container>
                <Stack direction="row" alignItems={"center"} spacing={2} >
-                    <Space />
                     <Stack>
                          <Reveal delay={0}>
                               <h1
@@ -84,8 +84,8 @@ const Home = () => {
                <Space />
                <Logos duration={0.4} delay={1} />
           </Reveal>
-          <RevealMoveUp >
-               <Container>
+          <Container>
+               <Reveal delay={2} width="100%" >
                     <Space />
                     <h2 style={{
                          fontSize: "2rem",
@@ -104,78 +104,283 @@ const Home = () => {
                          “Explore our comprehensive range of professional services”
                     </p>
                     <Space />
+               </Reveal>
+          </Container>
+          <RevealMoveUp >
+               <Container>
                     <Stack
                          direction="row"
-                         justifyContent="center"
+                         justifyContent="space-between"
                          spacing={2}
+                         sx={{
+                              width: "100%",
+                         }}
                     >
-                         {
-                              [
-                                   {
-                                        title: "Web Development",
-                                        description: "We design and develop custom websites that are tailored to your unique business needs.",
-                                   }
-                              ].map((data, i) => (
-                                   <Hover
-                                        key={"service" + i}
+                         <Stack
+                              direction="column"
+                              justifyContent="center"
+                              spacing={2}
+                              sx={{ flexGrow: 1 }}
+                         >
+                              <Box sx={{ flexGrow: 1 }}>
+                                   <Card
+                                        orientation="vertical" size="lg" variant="soft"
+                                        sx={{
+                                             height: "100%", width: "100%", borderRadius: "0px", padding: "0px", transition: "all 0.6s ease", cursor: "pointer", pb: 2,
+                                        }}
                                    >
-                                        <Card
-                                             orientation="vertical"
-                                             size="lg"
-                                             variant="soft"
+                                        <AspectRatio minHeight="120px" maxHeight="200px" sx={{ pt: 2, px: 2, }}>
+                                             <img
+                                                  src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286"
+                                                  srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
+                                                  loading="lazy"
+                                                  alt=""
+                                             />
+                                        </AspectRatio>
+                                        <Box sx={{ px: 3 }}>
+                                             <h3
+                                                  style={{
+                                                       fontSize: "x-large",
+                                                       textAlign: "center",
+                                                       cursor: "pointer",
+                                                  }}
+                                             >Our Service</h3>
+                                             <Typography textAlign={"center"} level="body-sm" sx={{
+                                                  cursor: "pointer",
+                                             }} >
+                                                  Delivering tailored digital solutions to drive
+                                                  your business growth.
+                                             </Typography>
+                                        </Box>
+                                   </Card>
+                              </Box>
+                              <Box sx={{ flexGrow: 1 }}>
+                                   <Card
+                                        orientation="vertical" size="lg" variant="soft"
+                                        sx={{
+                                             height: "100%", width: "100%", borderRadius: "0px", padding: "0px", transition: "all 0.6s ease", cursor: "pointer", pb: 2,
+                                        }}
+                                   >
+                                        <AspectRatio minHeight="120px" maxHeight="200px" sx={{ pt: 2, px: 2, }}>
+                                             <img
+                                                  src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286"
+                                                  srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
+                                                  loading="lazy"
+                                                  alt=""
+                                             />
+                                        </AspectRatio>
+                                        <Box sx={{ px: 3 }}>
+                                             <h3
+                                                  style={{
+                                                       fontSize: "x-large",
+                                                       textAlign: "center",
+                                                       cursor: "pointer",
+                                                  }}
+                                             >Our Service</h3>
+                                             <Typography textAlign={"center"} level="body-sm" sx={{
+                                                  cursor: "pointer",
+                                             }} >
+                                                  Delivering tailored digital solutions to drive
+                                                  your business growth.
+                                             </Typography>
+                                        </Box>
+                                   </Card>
+                              </Box>
+                         </Stack>
+                         <Stack
+                              direction="column"
+                              justifyContent="center"
+                              spacing={2}
+                              sx={{ flexGrow: 1 }}
+                         >
+                              <Box sx={{ flexGrow: .7 }} >
+                                   <Card
+                                        orientation="vertical" size="lg" variant="soft"
+                                        sx={{
+                                             height: "100%", width: "100%", borderRadius: "0px", padding: "0px", transition: "all 0.6s ease", cursor: "pointer", pb: 2,
+                                        }}
+                                   >
+                                        <AspectRatio minHeight="120px" maxHeight="200px" sx={{ pt: 2, px: 2, }}>
+                                             <img
+                                                  src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286"
+                                                  srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
+                                                  loading="lazy"
+                                                  alt=""
+                                             />
+                                        </AspectRatio>
+                                        <Box sx={{ px: 3 }}>
+                                             <h3
+                                                  style={{
+                                                       fontSize: "x-large",
+                                                       textAlign: "center",
+                                                       cursor: "pointer",
+                                                  }}
+                                             >Our Service</h3>
+                                             <Typography textAlign={"center"} level="body-sm" sx={{
+                                                  cursor: "pointer",
+                                             }} >
+                                                  Delivering tailored digital solutions to drive
+                                                  your business growth.
+                                             </Typography>
+                                        </Box>
+                                   </Card>
+                              </Box>
+                              <Box sx={{ flexGrow: 1 }} >
+                                   <Card
+                                        orientation="vertical"
+                                        size="lg"
+                                        variant="soft"
+                                        sx={{
+                                             height: "100%",
+                                             width: "100%",
+                                             borderRadius: "0px",
+                                             padding: "0px",
+                                             transition: "all 0.6s ease",
+                                             cursor: "pointer",
+                                             backgroundColor: "var(--brand-color)",
+                                             pb: 2,
+                                        }}
+                                   >
+                                        <AspectRatio minHeight="120px" maxHeight="200px"
                                              sx={{
-                                                  maxWidth: "512px",
-                                                  borderRadius: "0px",
+                                                  pt: 2,
+                                                  px: 2,
                                              }}
                                         >
-                                             <div>
-                                                  <Typography level="title-lg">{data.title}</Typography>
-                                                  <Typography level="body-sm">
-                                                       {data.description}
-                                                  </Typography>
-                                             </div>
-                                             <AspectRatio minHeight="120px" maxHeight="200px">
-                                                  <img
-                                                       src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286"
-                                                       srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
-                                                       loading="lazy"
-                                                       alt=""
-                                                  />
-                                             </AspectRatio>
-                                             <CardContent orientation="horizontal">
-                                                  <div>
-                                                       <Typography level="body-xs">Total price:</Typography>
-                                                       <Typography sx={{ fontSize: 'lg', fontWeight: 'lg' }}>$2,900</Typography>
-                                                  </div>
-                                                  <Button
-                                                       variant="outlined"
-                                                       size="lg"
-                                                       color="primary"
-                                                       aria-label="Explore Bahamas Islands"
-                                                       sx={{
-                                                            ml: 'auto',
-                                                            alignSelf: 'center',
-                                                            fontWeight: 600,
-                                                            borderRadius: "0px",
-                                                            backgroundColor: "var(--brand-color)",
-                                                            color: "var(--brand-color-secondary)",
-                                                            transition: "all 0.6s ease",
-                                                            borderColor: "var(--brand-color)",
-                                                            borderWidth: 2,
-                                                            "&:hover": {
-                                                                 backgroundColor: "var(--brand-color-secondary)",
-                                                                 color: "var(--brand-color)",
-                                                                 borderColor: "var(--brand-color)",
-                                                            }
-                                                       }}
-                                                  >
-                                                       Explore
-                                                  </Button>
-                                             </CardContent>
-                                        </Card>
-                                   </Hover>
-                              ))
-                         }
+                                             <img
+                                                  src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286"
+                                                  srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
+                                                  loading="lazy"
+                                                  alt=""
+                                             />
+                                        </AspectRatio>
+                                        <Box
+                                             sx={{
+                                                  px: 3
+                                             }}
+                                        >
+                                             <h3
+                                                  style={{
+                                                       fontSize: "x-large",
+                                                       textAlign: "center",
+                                                       cursor: "pointer",
+                                                       color: "var(--brand-color-secondary)!important",
+                                                  }}
+                                             >Our Service</h3>
+                                             <Typography textAlign={"center"} level="body-sm" sx={{
+                                                  cursor: "pointer",
+                                                  color: "var(--brand-color-secondary)!important",
+                                             }} >
+                                                  Delivering tailored digital solutions to drive
+                                                  your business growth.
+                                             </Typography>
+                                        </Box>
+                                   </Card>
+                              </Box>
+                              <Box sx={{ flexGrow: .7 }} >
+                                   <Card
+                                        orientation="vertical" size="lg" variant="soft"
+                                        sx={{
+                                             height: "100%", width: "100%", borderRadius: "0px", padding: "0px", transition: "all 0.6s ease", cursor: "pointer", pb: 2,
+                                        }}
+                                   >
+                                        <AspectRatio minHeight="120px" maxHeight="200px" sx={{ pt: 2, px: 2, }}>
+                                             <img
+                                                  src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286"
+                                                  srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
+                                                  loading="lazy"
+                                                  alt=""
+                                             />
+                                        </AspectRatio>
+                                        <Box sx={{ px: 3 }}>
+                                             <h3
+                                                  style={{
+                                                       fontSize: "x-large",
+                                                       textAlign: "center",
+                                                       cursor: "pointer",
+                                                  }}
+                                             >Our Service</h3>
+                                             <Typography textAlign={"center"} level="body-sm" sx={{
+                                                  cursor: "pointer",
+                                             }} >
+                                                  Delivering tailored digital solutions to drive
+                                                  your business growth.
+                                             </Typography>
+                                        </Box>
+                                   </Card>
+                              </Box>
+                         </Stack>
+                         <Stack
+                              direction="column"
+                              justifyContent="center"
+                              spacing={2}
+                              sx={{ flexGrow: 1 }}
+                         >
+                              <Box sx={{ flexGrow: 1 }}>
+                                   <Card
+                                        orientation="vertical" size="lg" variant="soft"
+                                        sx={{
+                                             height: "100%", width: "100%", borderRadius: "0px", padding: "0px", transition: "all 0.6s ease", cursor: "pointer", pb: 2,
+                                        }}
+                                   >
+                                        <AspectRatio minHeight="120px" maxHeight="128px" sx={{ pt: 2, px: 2, }}>
+                                             <img
+                                                  src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286"
+                                                  srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
+                                                  loading="lazy"
+                                                  alt=""
+                                             />
+                                        </AspectRatio>
+                                        <Box sx={{ px: 3 }}>
+                                             <h3
+                                                  style={{
+                                                       fontSize: "x-large",
+                                                       textAlign: "center",
+                                                       cursor: "pointer",
+                                                  }}
+                                             >Our Service</h3>
+                                             <Typography textAlign={"center"} level="body-sm" sx={{
+                                                  cursor: "pointer",
+                                             }} >
+                                                  Delivering tailored digital solutions to drive
+                                                  your business growth.
+                                             </Typography>
+                                        </Box>
+                                   </Card>
+                              </Box>
+                              <Box sx={{ flexGrow: 1 }}>
+                                   <Card
+                                        orientation="vertical" size="lg" variant="soft"
+                                        sx={{
+                                             height: "100%", width: "100%", borderRadius: "0px", padding: "0px", transition: "all 0.6s ease", cursor: "pointer", pb: 2,
+                                        }}
+                                   >
+                                        <AspectRatio minHeight="120px" maxHeight="200px" sx={{ pt: 2, px: 2, }}>
+                                             <img
+                                                  src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286"
+                                                  srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
+                                                  loading="lazy"
+                                                  alt=""
+                                             />
+                                        </AspectRatio>
+                                        <Box sx={{ px: 3 }}>
+                                             <h3
+                                                  style={{
+                                                       fontSize: "x-large",
+                                                       textAlign: "center",
+                                                       cursor: "pointer",
+                                                  }}
+                                             >Our Service</h3>
+                                             <Typography textAlign={"center"} level="body-sm" sx={{
+                                                  cursor: "pointer",
+                                             }} >
+                                                  Delivering tailored digital solutions to drive
+                                                  your business growth.
+                                             </Typography>
+                                        </Box>
+                                   </Card>
+                              </Box>
+                         </Stack>
                     </Stack>
                </Container>
                <Space />

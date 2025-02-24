@@ -6,11 +6,11 @@ const RevealMoveUp = ({ children, delay = 0, ...props }) => {
      const isInView = useInView(ref, {
           once: true,
           amount: 0.5,  // Element needs to be 50% visible
-          margin: "0px 0px -100px 0px"  // Negative margin to trigger slightly before coming into view
+          margin: "0px 0px -50px 0px"  // Negative margin to trigger slightly before coming into view
      });
      const mainControls = useAnimation();
      useEffect(() => {
-          console.log(isInView);
+          //console.log(isInView);
           if (isInView) {
                mainControls.start("visible");
           }

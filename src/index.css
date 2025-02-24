@@ -35,19 +35,19 @@ h6 {
      color: var(--brand-color-secondary) !important;
      background-color: var(--brand-color) !important;
 }
-
 /* Scrollbar styling */
 ::-webkit-scrollbar {
      width: 12px;
      background: white;
 }
-
 ::-webkit-scrollbar-thumb {
      background: var(--brand-color);
      border-radius: 0px;
      opacity: 0.5;
 }
-
 ::-webkit-scrollbar-track {
      background: white;
+}
+td {
+     border: 2px solid var(--brand-color);
 }
