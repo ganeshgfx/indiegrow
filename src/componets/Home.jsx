@@ -1,4 +1,5 @@
 import { Container, Stack, Box, Card, Typography, AspectRatio, CardContent, Button, Table, Divider } from "@mui/joy";
+import { useMediaQuery } from "@mui/material";
 import Reveal from "./Reveal";
 import RevealMoveUp from "./RevealMoveUp";
 import Logos from "./Logos";
@@ -13,11 +14,18 @@ const Home = () => {
           fontWeight: "900",
           color: "var(--brand-color)",
      }
+     const isMobile = useMediaQuery('(max-width:800px)');
      return <>
           <Space />
-          <Container>
-               <Stack direction="row" alignItems={"center"} spacing={2} >
-                    <Stack>
+          <Container >
+               <Stack
+                    //row for desktop and column-reverse for mobile
+                    direction={isMobile ? "column-reverse" : "row"}
+                    alignItems={"center"}
+                    spacing={2}
+               >
+                    <Stack
+                    >
                          <Reveal delay={0}>
                               <h1
                                    style={heaingStyle}
@@ -84,7 +92,7 @@ const Home = () => {
                <Space />
                <Logos duration={0.4} delay={1} />
           </Reveal>
-          <Container>
+          <Container >
                <Reveal delay={2} width="100%" >
                     <Space />
                     <h2 style={{
@@ -107,7 +115,7 @@ const Home = () => {
                </Reveal>
           </Container>
           <RevealMoveUp >
-               <Container>
+               <Container >
                     <Stack
                          direction="row"
                          justifyContent="space-between"
@@ -129,7 +137,7 @@ const Home = () => {
                                              height: "100%", width: "100%", borderRadius: "0px", padding: "0px", transition: "all 0.6s ease", cursor: "pointer", pb: 2,
                                         }}
                                    >
-                                        <AspectRatio minHeight="120px" maxHeight="200px" sx={{ pt: 2, px: 2, }}>
+                                        <AspectRatio minHeight="120px" sx={{ pt: 2, px: 2, height: "100%", width: "100%" }}>
                                              <img
                                                   src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286"
                                                   srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
@@ -387,5 +395,4 @@ const Home = () => {
           </RevealMoveUp >
      </>
 };
-
 export default Home;
