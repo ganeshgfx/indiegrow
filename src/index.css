@@ -1,78 +1,81 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 :root {
-     --brand-color: #14234c;
-     --brand-color-secondary: #f5ffc9;
-     --brand-color-tertiary: #8e1618;
-     --scroll-bar-color: #3e5879;
+  --brand-color: #14234c;
+  --brand-color-secondary: #f5ffc9;
+  --brand-color-tertiary: #8e1618;
+  --scroll-bar-color: #3e5879;
 }
 
 * {
-     padding: 0px;
-     margin: 0px;
-     font-family: "Montserrat" !important;
+  /* padding: 0;
+  margin: 0; */
+  font-family: "Montserrat" !important;
 }
 h1,
 h2,
 h4,
 h5,
 h6 {
-     color: var(--brand-color) !important;
+  color: var(--brand-color) !important;
 }
 .navTextBox {
-     margin: 0px !important;
-     transition: all 0.6s ease;
+  margin: 0px !important;
+  transition: all 0.6s ease;
 }
 .navTextBox > a {
-     color: var(--brand-color) !important;
-     background-color: transparent !important;
-     padding: 12px;
-     transition: all 0.6s ease;
+  color: var(--brand-color) !important;
+  background-color: transparent !important;
+  padding: 12px;
+  transition: all 0.6s ease;
 }
 /* Hover effect */
 .navTextBox:hover > a {
-     color: var(--brand-color-secondary) !important;
-     background-color: var(--brand-color) !important;
+  color: var(--brand-color-secondary) !important;
+  background-color: var(--brand-color) !important;
 }
 /* Touch effect */
 .navTextBox > a:active {
-     color: var(--brand-color-secondary) !important;
-     background-color: var(--brand-color) !important;
+  color: var(--brand-color-secondary) !important;
+  background-color: var(--brand-color) !important;
 }
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-     width: 12px;
-     background: white;
+  width: 12px;
+  background: white;
 }
 ::-webkit-scrollbar-thumb {
-     background: var(--brand-color);
-     border-radius: 0px;
-     opacity: 0.5;
+  background: var(--brand-color);
+  border-radius: 0px;
+  opacity: 0.5;
 }
 ::-webkit-scrollbar-track {
-     background: white;
+  background: white;
 }
 td {
-     border: 2px solid var(--brand-color);
+  border: 2px solid var(--brand-color);
 }
 .flex-grow-1 {
-     flex-grow: 1;
+  flex-grow: 1;
 }
 .opacity-0 {
-     opacity: 0;
+  opacity: 0;
 }
 .bg-brand {
-     background-color: var(--brand-color);
+  background-color: var(--brand-color);
 }
 .bg-brand-secondary {
-     background-color: var(--brand-color-secondary);
+  background-color: var(--brand-color-secondary);
 }
 .bg-light-grey {
-     background-color: #f0f4f8;
+  background-color: #f0f4f8;
 }
 .font-color-brand {
-     color: var(--brand-color) !important;
+  color: var(--brand-color) !important;
+}
+.color-brand {
+  background-color: var(--brand-color) !important;
 }
 .font-color-brand-secondary {
-     color: var(--brand-color-secondary) !important;
+  color: var(--brand-color-secondary) !important;
 }
