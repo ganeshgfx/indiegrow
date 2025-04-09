@@ -75,10 +75,7 @@ const Home = () => {
           </Stack>
           <Space />
           <RevealMoveUp delay={0.5}>
-            <img
-              src="/public/newhero.png"
-              className="h-[400px] w-[2000px]"
-            ></img>
+            <img src="/newhero.png" className="h-[400px] w-[2000px]"></img>
           </RevealMoveUp>
         </Stack>
       </Container>
@@ -134,7 +131,7 @@ const Home = () => {
                       <img
                         alt="gallery"
                         className="w-full object-cover h-full object-center block"
-                        src="/public/servicess/webdesign.png"
+                        src="/servicess/webdesign.png"
                       />
                       <span
                         className="bg-brand"
@@ -154,7 +151,7 @@ const Home = () => {
                       <img
                         alt="gallery"
                         className="w-full object-cover h-full object-center block"
-                        src="/public/servicess/brandbuild.png"
+                        src="/servicess/brandbuild.png"
                       />
                       <span
                         className="bg-brand"
@@ -174,7 +171,7 @@ const Home = () => {
                       <img
                         alt="gallery"
                         className="w-full h-full object-cover object-center block"
-                        src="/public/servicess/graphicsdesign.png"
+                        src="/servicess/graphicsdesign.png"
                       />
                       <span
                         className="bg-brand"
@@ -196,7 +193,7 @@ const Home = () => {
                       <img
                         alt="gallery"
                         className="w-full h-full object-cover object-center block"
-                        src="/public/servicess/webdesign.png"
+                        src="/servicess/webdesign.png"
                       />
                       <span
                         className="bg-brand"
@@ -216,7 +213,7 @@ const Home = () => {
                       <img
                         alt="gallery"
                         className="w-full object-cover h-full object-center block"
-                        src="/public/servicess/brandbuild.png"
+                        src="/servicess/brandbuild.png"
                       />
                       <span
                         className="bg-brand"
@@ -236,7 +233,7 @@ const Home = () => {
                       <img
                         alt="gallery"
                         className="w-full object-cover h-full object-center block"
-                        src="/public/servicess/brandbuild.png"
+                        src="/servicess/brandbuild.png"
                       />
                       <span
                         className="bg-brand"

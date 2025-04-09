@@ -18,7 +18,7 @@ const Portfolio = () => {
                 <img
                   className="object-cover object-center "
                   alt="hero"
-                  src="/public/portfolio/image.png"
+                  src="/portfolio/image.png"
                 />
               </div>
               <div className="lg:flex-grow md:w-1/2  md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
@@ -141,7 +141,7 @@ const Portfolio = () => {
             <img
               className="object-cover object-center rounded"
               alt="hero"
-              src="/public/portfolio/GS.png"
+              src="/portfolio/GS.png"
             />
           </div>
         </div>

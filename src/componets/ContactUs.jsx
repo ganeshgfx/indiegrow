@@ -89,7 +89,7 @@ const ContactUs = () => {
                   <img
                     className="object-cover object-center "
                     alt="Contact Support"
-                    src="/public/contactus.png"
+                    src="/contactus.png"
                   />
                 </div>
               </div>
