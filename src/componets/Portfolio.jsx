@@ -4,7 +4,8 @@ const Portfolio = () => {
   return (
     <RevealMoveUp>
       <section id="portfolio" className="portfolio-section py-16 px-4">
-        <div className="container mx-auto">
+        <div className="container ">
+          {/* Section Header */}
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Portfolio Showcase</h2>
             <p className="text-lg text-indigo-500 font-semibold">
@@ -12,138 +13,130 @@ const Portfolio = () => {
             </p>
           </div>
 
-          <section className="text-gray-400  body-font mb-14">
-            <div className="container mx-auto flex px-5  md:flex-row flex-col items-center">
-              <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+          {/* First Project */}
+          <section className="text-gray-400 body-font mb-14">
+            <div className="container mx-auto flex px-5 flex-col-reverse md:flex-row items-center gap-10">
+              <div className="w-full md:w-1/2">
                 <img
-                  className="object-cover object-center "
-                  alt="hero"
+                  className="object-cover object-center w-full rounded"
+                  alt="GravityFilms"
                   src="/portfolio/image.png"
                 />
               </div>
-              <div className="lg:flex-grow md:w-1/2  md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-                <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium  font-color-brand">
+              <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left p-4 md:p-0">
+                <h1 className="text-2xl md:text-4xl mb-4 font-medium font-color-brand">
                   GravityFilms
                 </h1>
-                <p className=" leading-relaxed">
-                  fully functional website for a creative agency with clean and
-                  minimalistic design
+                <p className="leading-relaxed mb-4">
+                  Fully functional website for a creative agency with clean and
+                  minimalistic design.
                 </p>
-                <div className="flex w-full md:justify-start justify-center items-end brand">
-                  <ul style={{ listStyleType: "disc" }} className="pl-4">
-                    <li>Minimilistic design</li>
-                    <li>Resposive design</li>
-                    <li>SEO Friendly</li>
-                    <li>Fast loading</li>
-                  </ul>
-                </div>
-
-                <div className="flex lg:flex-row md:flex-col text-gray-300 mt-4">
-                  <button className="bg-gray-800 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-700 hover:text-white focus:outline-none">
+                <ul className="list-disc list-inside text-left mb-4">
+                  <li>Minimalistic design</li>
+                  <li>Responsive design</li>
+                  <li>SEO Friendly</li>
+                  <li>Fast loading</li>
+                </ul>
+                <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                  <button className="bg-gray-800 py-3 px-5 rounded-lg flex items-center hover:bg-gray-700 focus:outline-none">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
                       className="w-6 h-6"
                       viewBox="0 0 512 512"
                     >
-                      <path d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z" />
+                      <path d="M99.617 8.057a50.191..."></path>
                     </svg>
-                    <span className="ml-4 flex items-start flex-col leading-none">
-                      <span className="text-xs text-gray-400 mb-1">
+                    <span className="ml-4 leading-none">
+                      <span className="text-xs text-gray-400 mb-1 block">
                         GET IT ON
                       </span>
-                      <span className="title-font font-medium">
-                        Google Play
-                      </span>
+                      <span className="font-medium">Google Play</span>
                     </span>
                   </button>
-                  <button className="bg-gray-800 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-700 hover:text-white focus:outline-none lg:ml-4 md:ml-0 ml-4 md:mt-4 mt-0 lg:mt-0">
+                  <button className="bg-gray-800 py-3 px-5 rounded-lg flex items-center hover:bg-gray-700 focus:outline-none">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
                       className="w-6 h-6"
                       viewBox="0 0 305 305"
                     >
-                      <path d="M40.74 112.12c-25.79 44.74-9.4 112.65 19.12 153.82C74.09 286.52 88.5 305 108.24 305c.37 0 .74 0 1.13-.02 9.27-.37 15.97-3.23 22.45-5.99 7.27-3.1 14.8-6.3 26.6-6.3 11.22 0 18.39 3.1 25.31 6.1 6.83 2.95 13.87 6 24.26 5.81 22.23-.41 35.88-20.35 47.92-37.94a168.18 168.18 0 0021-43l.09-.28a2.5 2.5 0 00-1.33-3.06l-.18-.08c-3.92-1.6-38.26-16.84-38.62-58.36-.34-33.74 25.76-51.6 31-54.84l.24-.15a2.5 2.5 0 00.7-3.51c-18-26.37-45.62-30.34-56.73-30.82a50.04 50.04 0 00-4.95-.24c-13.06 0-25.56 4.93-35.61 8.9-6.94 2.73-12.93 5.09-17.06 5.09-4.64 0-10.67-2.4-17.65-5.16-9.33-3.7-19.9-7.9-31.1-7.9l-.79.01c-26.03.38-50.62 15.27-64.18 38.86z" />
-                      <path d="M212.1 0c-15.76.64-34.67 10.35-45.97 23.58-9.6 11.13-19 29.68-16.52 48.38a2.5 2.5 0 002.29 2.17c1.06.08 2.15.12 3.23.12 15.41 0 32.04-8.52 43.4-22.25 11.94-14.5 17.99-33.1 16.16-49.77A2.52 2.52 0 00212.1 0z" />
+                      <path d="M40.74 112.12c-25.79..."></path>
                     </svg>
-                    <span className="ml-4 flex items-start flex-col leading-none">
-                      <span className="text-xs text-gray-400 mb-1">
+                    <span className="ml-4 leading-none">
+                      <span className="text-xs text-gray-400 mb-1 block">
                         Download on the
                       </span>
-                      <span className="title-font font-medium">App Store</span>
+                      <span className="font-medium">App Store</span>
                     </span>
                   </button>
                 </div>
               </div>
             </div>
           </section>
-        </div>
-      </section>
-      {/* 2nd */}
-      <section className="text-gray-600 body-font mb-14 ">
-        <div className="container mx-auto flex px-5  md:flex-row flex-col items-center">
-          <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-              GAS MANAGEMENT SYSTEM
-            </h1>
-            <p className="mb-8 leading-relaxed">
-              Automate your gas bills and save time and money by using our gas
-              management system. With our system, you can easily track your gas
-              usage, set up automatic payments.
-            </p>
-            <div className="flex w-full md:justify-start justify-center items-end">
-              <div className="relative mr-4 md:w-full lg:w-full xl:w-1/2 w-2/4">
-                <ul style={{ listStyleType: "disc" }} className="pl-4">
+
+          {/* Second Project */}
+          <section className="text-gray-600 body-font mb-14">
+            <div className="container mx-auto flex px-5 flex-col md:flex-row items-center gap-10">
+              <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left p-4 md:p-0">
+                <h1 className="text-2xl md:text-4xl mb-4 font-medium text-gray-900">
+                  GAS MANAGEMENT SYSTEM
+                </h1>
+                <p className="mb-4 leading-relaxed">
+                  Automate your gas bills and save time and money by using our
+                  gas management system. With our system, you can easily track
+                  your gas usage and set up automatic payments.
+                </p>
+                <ul className="list-disc list-inside text-left mb-4">
                   <li>Track your gas usage</li>
                   <li>Set up automatic payments</li>
                   <li>Get alerts when you're running low on gas</li>
                   <li>Real-Time data access</li>
                 </ul>
+                <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                  <button className="bg-gray-100 py-3 px-5 rounded-lg flex items-center hover:bg-gray-200 focus:outline-none">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      className="w-6 h-6"
+                      viewBox="0 0 512 512"
+                    >
+                      <path d="M99.617 8.057a50.191..."></path>
+                    </svg>
+                    <span className="ml-4 leading-none">
+                      <span className="text-xs text-gray-600 mb-1 block">
+                        GET IT ON
+                      </span>
+                      <span className="font-medium">Google Play</span>
+                    </span>
+                  </button>
+                  <button className="bg-gray-100 py-3 px-5 rounded-lg flex items-center hover:bg-gray-200 focus:outline-none">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      className="w-6 h-6"
+                      viewBox="0 0 305 305"
+                    >
+                      <path d="M40.74 112.12c-25.79..."></path>
+                    </svg>
+                    <span className="ml-4 leading-none">
+                      <span className="text-xs text-gray-600 mb-1 block">
+                        Download on the
+                      </span>
+                      <span className="font-medium">App Store</span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div className="w-full md:w-1/2">
+                <img
+                  className="object-cover object-center w-full rounded"
+                  alt="Gas Management"
+                  src="/portfolio/GS.png"
+                />
               </div>
             </div>
-
-            <div className="flex lg:flex-row md:flex-col mt-1">
-              <button className="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  className="w-6 h-6"
-                  viewBox="0 0 512 512"
-                >
-                  <path d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z" />
-                </svg>
-                <span className="ml-4 flex items-start flex-col leading-none">
-                  <span className="text-xs text-gray-600 mb-1">GET IT ON</span>
-                  <span className="title-font font-medium">Google Play</span>
-                </span>
-              </button>
-              <button className="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center lg:ml-4 md:ml-0 ml-4 md:mt-4 mt-0 lg:mt-0 hover:bg-gray-200 focus:outline-none">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  className="w-6 h-6"
-                  viewBox="0 0 305 305"
-                >
-                  <path d="M40.74 112.12c-25.79 44.74-9.4 112.65 19.12 153.82C74.09 286.52 88.5 305 108.24 305c.37 0 .74 0 1.13-.02 9.27-.37 15.97-3.23 22.45-5.99 7.27-3.1 14.8-6.3 26.6-6.3 11.22 0 18.39 3.1 25.31 6.1 6.83 2.95 13.87 6 24.26 5.81 22.23-.41 35.88-20.35 47.92-37.94a168.18 168.18 0 0021-43l.09-.28a2.5 2.5 0 00-1.33-3.06l-.18-.08c-3.92-1.6-38.26-16.84-38.62-58.36-.34-33.74 25.76-51.6 31-54.84l.24-.15a2.5 2.5 0 00.7-3.51c-18-26.37-45.62-30.34-56.73-30.82a50.04 50.04 0 00-4.95-.24c-13.06 0-25.56 4.93-35.61 8.9-6.94 2.73-12.93 5.09-17.06 5.09-4.64 0-10.67-2.4-17.65-5.16-9.33-3.7-19.9-7.9-31.1-7.9l-.79.01c-26.03.38-50.62 15.27-64.18 38.86z" />
-                  <path d="M212.1 0c-15.76.64-34.67 10.35-45.97 23.58-9.6 11.13-19 29.68-16.52 48.38a2.5 2.5 0 002.29 2.17c1.06.08 2.15.12 3.23.12 15.41 0 32.04-8.52 43.4-22.25 11.94-14.5 17.99-33.1 16.16-49.77A2.52 2.52 0 00212.1 0z" />
-                </svg>
-                <span className="ml-4 flex items-start flex-col leading-none">
-                  <span className="text-xs text-gray-600 mb-1">
-                    Download on the
-                  </span>
-                  <span className="title-font font-medium">App Store</span>
-                </span>
-              </button>
-            </div>
-          </div>
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <img
-              className="object-cover object-center rounded"
-              alt="hero"
-              src="/portfolio/GS.png"
-            />
-          </div>
+          </section>
         </div>
       </section>
     </RevealMoveUp>

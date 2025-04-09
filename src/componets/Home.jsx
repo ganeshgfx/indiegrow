@@ -86,18 +86,14 @@ const Home = () => {
       <Container>
         <Reveal delay={2} width="100%">
           <Space />
-          <h2
-            style={{
-              fontSize: "2rem",
-              textAlign: "center",
-            }}
-          >
+          <h1 className="sm:text-4xl text-3xl mb-4 font-extrabold text-indigo-600 text-center">
             Our Service
-          </h2>
+          </h1>
           <p
+            className=" text-2xl md:text-2xl lg:text-3xl"
             style={{
               textAlign: "center",
-              fontSize: "2rem",
+              // fontSize: "2rem",
               fontWeight: "500",
               lineHeight: "1.5",
             }}
@@ -124,10 +120,10 @@ const Home = () => {
               sx={{ flexGrow: 1 }}
             ></Stack>
             <section className="text-gray-600 body-font">
-              <div className="container px-5  mx-auto flex flex-wrap">
-                <div className="flex flex-wrap md:-m-2 -m-1">
-                  <div className="flex flex-wrap w-1/2">
-                    <div className="md:p-2 p-1 w-1/2 relative">
+              <div className="container px-5 mx-auto flex flex-wrap">
+                <div className="flex flex-wrap -m-1 md:-m-2">
+                  <div className="flex flex-wrap w-full md:w-1/2">
+                    <div className="p-1 md:p-2 w-1/2 sm:w-full relative">
                       <img
                         alt="gallery"
                         className="w-full object-cover h-full object-center block"
@@ -141,13 +137,13 @@ const Home = () => {
                           left: "10px",
                           color: "white",
                           padding: "5px 10px",
-                          fontSize: "25px",
+                          fontSize: "18px",
                         }}
                       >
                         Website Design
                       </span>
                     </div>
-                    <div className="md:p-2 p-1 w-1/2 relative">
+                    <div className="p-1 md:p-2 w-1/2 sm:w-full relative">
                       <img
                         alt="gallery"
                         className="w-full object-cover h-full object-center block"
@@ -161,13 +157,13 @@ const Home = () => {
                           left: "10px",
                           color: "white",
                           padding: "5px 10px",
-                          fontSize: "25px",
+                          fontSize: "18px",
                         }}
                       >
                         Brand Building
                       </span>
                     </div>
-                    <div className="md:p-2 p-1 w-full relative">
+                    <div className="p-1 md:p-2 w-full relative">
                       <img
                         alt="gallery"
                         className="w-full h-full object-cover object-center block"
@@ -181,15 +177,15 @@ const Home = () => {
                           left: "10px",
                           color: "white",
                           padding: "5px 10px",
-                          fontSize: "25px",
+                          fontSize: "18px",
                         }}
                       >
-                        Website Design
+                        Graphics Design
                       </span>
                     </div>
                   </div>
-                  <div className="flex flex-wrap w-1/2">
-                    <div className="md:p-2 p-1 w-full relative">
+                  <div className="flex flex-wrap w-full md:w-1/2">
+                    <div className="p-1 md:p-2 w-full relative">
                       <img
                         alt="gallery"
                         className="w-full h-full object-cover object-center block"
@@ -203,13 +199,13 @@ const Home = () => {
                           left: "10px",
                           color: "white",
                           padding: "5px 10px",
-                          fontSize: "25px",
+                          fontSize: "18px",
                         }}
                       >
                         Graphics Design
                       </span>
                     </div>
-                    <div className="md:p-2 p-1 w-1/2 relative">
+                    <div className="p-1 md:p-2 w-1/2 sm:w-full relative">
                       <img
                         alt="gallery"
                         className="w-full object-cover h-full object-center block"
@@ -218,7 +214,7 @@ const Home = () => {
                       <span
                         className="bg-brand"
                         style={{
-                          fontSize: "25px",
+                          fontSize: "18px",
                           position: "absolute",
                           bottom: "10px",
                           left: "10px",
@@ -229,7 +225,7 @@ const Home = () => {
                         Digital Marketing
                       </span>
                     </div>
-                    <div className="md:p-2 p-1 w-1/2 relative rounded border-amber-500">
+                    <div className="p-1 md:p-2 w-1/2 sm:w-full relative rounded border-amber-500">
                       <img
                         alt="gallery"
                         className="w-full object-cover h-full object-center block"
@@ -243,7 +239,7 @@ const Home = () => {
                           left: "10px",
                           color: "white",
                           padding: "5px 10px",
-                          fontSize: "25px",
+                          fontSize: "18px",
                         }}
                       >
                         Website Design
