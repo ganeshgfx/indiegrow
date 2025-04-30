@@ -36,7 +36,7 @@ const contactinfo = [
         className="font-color-brand w-12 h-12 mb-3 inline-block"
       />
     ),
-    title: "WhatsApp",
+    title: "Facebook",
   },
   {
     icon: (
@@ -46,7 +46,7 @@ const contactinfo = [
         className="font-color-brand w-12 h-12 mb-3 inline-block"
       />
     ),
-    title: "WhatsApp",
+    title: "Phone",
   },
 ];
 
